@@ -1,0 +1,56 @@
+@import '../../styles/color-scheme.module.scss';
+@import '../../styles/keyframes.module.scss';
+
+.navbar-container {
+    height: 100%;
+    // max-width: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 10px;
+    margin: 10px;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.navbar__link {
+    height: 60px;
+    min-width: 50px;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__home-link {
+    display: none;
+    @media screen and (min-width: 1023px) {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar__what-we-do {
+        position: relative;
+        &:hover {
+            .popup-menu-training {
+                display: flex;
+                animation: fadeIn 0.1s;
+            }   
+        }
+        .popup-menu-training {
+            display: none;
+            position: absolute;
+            top: 1.5px;
+            width: 150px;
+            &:hover {
+                .navbar__what-we-do {
+                    display: none;
+                }
+            }
+        }
+    }
+}

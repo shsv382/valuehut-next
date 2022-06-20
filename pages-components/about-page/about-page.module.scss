@@ -1,0 +1,30 @@
+@import '../../styles/keyframes.module.scss';
+
+.about-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1024px;
+    @media screen and (max-width: 1080px) {
+        width: 992px;
+    }
+    @media screen and (max-width: 1023px) {
+        width: 768px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+    margin: auto;
+}
+
+.about-page__trainers-header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.about-page__avatar {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}

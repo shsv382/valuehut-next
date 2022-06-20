@@ -1,0 +1,29 @@
+@import '../../styles/color-scheme.module.scss';
+
+.contact-data {
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    border-top: 1px solid $primaryColorLight;
+    &:last-of-type {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $primaryColorLight;
+    }
+    @media screen and (max-width: 767px) {
+        border-top: 1px solid $primaryColorLight;
+        padding: 30px 10px;
+    }
+    li {
+        list-style-type: none;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 12px;
+        .contact-data__list__slash {
+            color: $primaryColor;
+            font-weight: 700;
+        }
+        .contact-data__link {
+            font-size: 24px;
+        }
+    }
+}

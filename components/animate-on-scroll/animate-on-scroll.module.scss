@@ -1,0 +1,21 @@
+@keyframes appearance {
+    from {
+        opacity: 0;
+        top: 10px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+.appearancable__initial__hidden {
+    position: relative;
+    opacity: 0;
+    top: 10px;
+}
+
+.appearancable {
+    animation: appearance 0.35s ease-in;
+    position: relative;
+}

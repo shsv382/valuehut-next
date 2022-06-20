@@ -1,0 +1,39 @@
+@import '../../styles/color-scheme.module.scss';
+
+header.header {
+    height: 120px;
+    @media screen and (max-width: 768px) {
+        height: 80px;
+    }
+    width: 100%;
+    background-color: white;
+    padding: 20px 10px;
+    position: fixed;
+    top: 0;
+    z-index: 9990;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid $primaryColorLight;
+}
+
+.headerContainer {
+    height: 100%;
+    width: 984px;
+    @media screen and (max-width: 1080px) {
+        width: 972px;
+    }
+    @media screen and (max-width: 1023px) {
+        width: 728px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}

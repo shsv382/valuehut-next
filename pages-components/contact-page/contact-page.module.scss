@@ -1,0 +1,51 @@
+@import '../../styles/keyframes.module.scss';
+@import '../../styles/color-scheme.module.scss';
+
+.contact-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1024px;
+    @media screen and (max-width: 1080px) {
+        width: 992px;
+    }
+    @media screen and (max-width: 1023px) {
+        width: 768px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.how-to-contact {
+    width: 50%;
+    padding: 30px 10px;
+    text-align: justify;
+    p {
+        margin-top: 20px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 424px) {
+        padding: 20px 3px; 
+    }
+}
+
+.contact-data-block {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px 10px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        padding-top: 0;
+    }
+    @media screen and (max-width: 424px) {
+        padding: 20px 3px; 
+    }
+}

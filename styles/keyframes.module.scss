@@ -1,0 +1,61 @@
+@keyframes appearance {
+    from {
+        opacity: 0;
+        top: 10px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes swimming {
+    0% { 
+        transform: translateX(0%); 
+    }
+    100% { 
+        transform: translateX(-50%);
+    }
+}
+
+.appearancable {
+    animation: appearance 0.35s ease-in;
+    position: relative;
+}
+
+.appearancable-reverse {
+    animation: appearance 0.35s ease-in;
+	animation-direction: reverse;
+    position: relative;
+}
+
+@keyframes fadeDown {
+	from {
+		height: 0;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateBack {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		background: rgba(30,30,30,0);
+	}
+}

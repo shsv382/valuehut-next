@@ -1,0 +1,19 @@
+@import '../../styles/color-scheme.module.scss';
+@import '../../styles/keyframes.module.scss';
+
+.popup-menu-item {
+    padding: 15px 15px;
+    height: 60px;
+    text-align: center;
+    border-bottom: 1px solid $neutral200;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    @media screen and (max-width: 767px) {
+        border-left: none;
+        border-right: none;
+        z-index: 9999;
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,13 @@
+.triple-box {
+    width: 100%;
+    padding: 30px 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

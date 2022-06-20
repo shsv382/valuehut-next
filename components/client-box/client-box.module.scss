@@ -1,0 +1,99 @@
+@import '../../styles/color-scheme.module.scss';
+
+.client-box {
+    width: 130px;
+    max-width: 100%;
+    height: 160px;
+    max-height: 100%;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    .client-box__text-content {
+        font-size: 16px;
+    }
+    .client-box__image-content {
+        max-height: 80%;
+        transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    &:hover {
+        .client-box__image-content {
+            transform: scale(1.1);
+            transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    }
+    @media screen and (max-width: 767px) {
+        // width: 260px;
+        box-sizing: content-box;
+        max-width: 100%;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        // border-bottom: 1px solid $neutral300;
+        .client-box__image-content {
+            max-width: 100%;
+        }
+    }
+}
+
+.client-box__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0 0 1px 1px $neutral300;
+    transition: box-shadow .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    & * {
+        width: 100%;
+    }
+    &:hover {
+        box-shadow: 0 0 3px 1px $primaryColorLight;
+        transition: box-shadow .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}
+
+.client-box__title {
+    text-align: center;
+}
+
+.client-box__title__slash {
+    color: $primaryColor;
+}
+
+.client-box__icon {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+}
+
+.client-box__icon-bordered {
+    background-size: cover;
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-box__icon-bordered__acronym {
+    color: $neutral600;
+    font-size: 50px;
+    font-weight: medium;
+}
+
+.client-box__actions {
+    position: absolute;
+    bottom: 0;
+    z-index: 9990;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 10% , rgba(255,255,255,1) 100% );
+}

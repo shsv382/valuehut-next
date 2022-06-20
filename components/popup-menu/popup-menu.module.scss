@@ -1,0 +1,19 @@
+@import '../../styles/color-scheme.module.scss';
+@import '../../styles/keyframes.module.scss';
+
+.popup-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: $neutral100;
+    z-index: 10000;
+    &.hidden {
+        display: none;
+    }
+    @media screen and (max-width: 767px) {
+        position: fixed;
+        top: unset; bottom: 55px;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+}

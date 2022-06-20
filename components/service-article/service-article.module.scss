@@ -1,0 +1,17 @@
+.service__article {
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    max-width: 90%;
+    h2, p {
+        margin-bottom: 20px;
+        ul {
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 20px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.header-with-button {
+    display: flex;
+    width: 100%;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-with-button__header {
+    margin-right: 15px;
+}

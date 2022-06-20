@@ -1,0 +1,39 @@
+.booking-form {
+    width: 95%;
+    margin: auto;
+    .button#addToCart {
+        width: 100%;
+    }
+    select {
+        display: block;
+        width: 100%;
+        // max-width: 280px;
+        margin: 20px 0;
+        z-index: 9999;
+        border-radius: none;
+        option {
+            z-index: 10000;
+            padding: 10px;
+        }
+    }
+}
+
+.booking-form__description {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-form__logo-container {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.booking-form__logo {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.MuiMenuItem-root {
+    z-index: 9999;
+}
