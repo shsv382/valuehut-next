@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppSelector, useAppDispatch } from "../../redux/hooks";
-import { Link } from "next/link";
+import Link from 'next/link';
 
 import CartItem from '../cart-item/cart-item.component';
 import { cartStringify } from '../../redux/cart/cart.utils';

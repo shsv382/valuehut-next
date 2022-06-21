@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Homepage from '../pages-components/homepage/homepage.component'
 import homepageProps from '../lib/homepage.data'
 import { HomepageTypes } from '../data/content';
-import Header from '../components/header/header.component'
+import Layout from '../components/layout/layout.component.jsx'
 
 export function getStaticProps() {
   const homeProps = homepageProps();
@@ -21,15 +21,14 @@ interface HomeTypes {
 
 const Home: NextPage<HomeTypes> = ({ homeProps }) => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Valuehut</title>
         <meta name="description" content="Valuehut.co" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Header /> */}
       <Homepage {...homeProps} />
-    </>
+    </Layout>
   )
 }
 

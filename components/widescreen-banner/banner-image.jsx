@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const BannerImage = styled.div`
-    background-image: url("./images/landscape-wide.jpg");
+    background-image: url("images/landscape-wide.jpg");
     background-size: cover;
     background-position: center center;
     width: 100%;

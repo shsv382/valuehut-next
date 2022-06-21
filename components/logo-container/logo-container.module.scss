@@ -1,6 +1,6 @@
 @import '../../styles/color-scheme.module.scss';
 
-.logo-container {
+.logoContainer {
     overflow: hidden;
     a {
         max-width: 100%;
@@ -16,7 +16,7 @@
     }
 }
 
-.footer-container .logo-container {
+.footer-container .logoContainer {
     @media screen and (max-width: 1023px) {
         display: none;
     }

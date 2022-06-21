@@ -49,13 +49,13 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                 {
                     streams &&
                     <Link href={`${header.toLowerCase().split(" ").join("-")}#book-now`} className="button button-primary button-primary-default">
-                        Book Now
+                        <a>Book Now</a>
                     </Link>
                 }
                 {
                     isTraining &&
                     <Link href={header.toLowerCase().split(" ").join("-")} className="button button-secondary button-secondary-default">
-                        Read More
+                        <a>Read More</a>
                     </Link>
                 }
                 {

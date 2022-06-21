@@ -1,5 +1,5 @@
 import React from 'react';
-import './logo-container.module.scss';
+import logoStyles from './logo-container.module.scss';
 
 import Link from 'next/link';
 
@@ -10,8 +10,8 @@ interface LogoTypes {
 
 const LogoContainer: React.FC<LogoTypes> = ({ imageURL }) => {
     return (
-        <div className='logo-container'>
-            <Link to='/'>
+        <div className={`${logoStyles.logoContainer}`}>
+            <Link href='/'>
                 <img src={ imageURL } />
             </Link>
         </div>

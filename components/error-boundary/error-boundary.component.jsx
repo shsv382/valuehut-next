@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "next/link";
+import Link from 'next/link';
 
 import { 
     ErrorImageOverlay, 
@@ -31,7 +31,7 @@ class ErrorBoundary extends React.Component {
                 <ErrorImageContainer imageUrl='./404.png' />
                 <ErrorImageText>This Page Lost in Space</ErrorImageText>
                 <br />
-                <p>Try to refresh or <Link to='/' className="link">Return to Homepage</Link></p>
+                <p>Try to refresh or <Link href='/' className="link">Return to Homepage</Link></p>
             </ErrorImageOverlay>
         }
 
