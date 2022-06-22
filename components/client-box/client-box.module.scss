@@ -1,6 +1,6 @@
 @import '../../styles/color-scheme.module.scss';
 
-.client-box {
+.clientBox {
     width: 130px;
     max-width: 100%;
     height: 160px;
@@ -13,15 +13,15 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 40px;
-    .client-box__text-content {
+    .clientBox__textContent {
         font-size: 16px;
     }
-    .client-box__image-content {
+    .clientBox__imageContent {
         max-height: 80%;
         transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     &:hover {
-        .client-box__image-content {
+        .clientBox__imageContent {
             transform: scale(1.1);
             transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
@@ -33,13 +33,13 @@
         padding-bottom: 40px;
         margin-bottom: 40px;
         // border-bottom: 1px solid $neutral300;
-        .client-box__image-content {
+        .clientBox__imageContent {
             max-width: 100%;
         }
     }
 }
 
-.client-box__content {
+.clientBox__content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -59,21 +59,21 @@
     }
 }
 
-.client-box__title {
+.clientBox__title {
     text-align: center;
 }
 
-.client-box__title__slash {
+.clientBox__title__slash {
     color: $primaryColor;
 }
 
-.client-box__icon {
+.clientBox__icon {
     display: inline-block;
     width: 160px;
     height: 160px;
 }
 
-.client-box__icon-bordered {
+.clientBox__iconBordered {
     background-size: cover;
     border-radius: 100%;
     width: 160px;
@@ -84,13 +84,13 @@
     align-items: center;
 }
 
-.client-box__icon-bordered__acronym {
+.clientBox__iconBordered__acronym {
     color: $neutral600;
     font-size: 50px;
     font-weight: medium;
 }
 
-.client-box__actions {
+.clientBox__actions {
     position: absolute;
     bottom: 0;
     z-index: 9990;

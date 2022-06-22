@@ -1,6 +1,6 @@
 import { url } from "inspector";
 import React from "react";
-import './service-box.module.scss';
+import serviceBoxStyles from './service-box.module.scss';
 import { TrainingTypes } from '../../data/training';
 import Link from 'next/link';
 
@@ -21,11 +21,12 @@ interface ServiceBoxTypes {
 
 const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL, url}) => {
     return (
-        <Link   to={url} 
-                className="link service-box">
-            <div className="link service-box__content" style={{backgroundImage: `url(/images/${imageURL})`}}>
-                <h1 className="service-box__header">{ header }</h1>
-            </div>
+        <Link href={url}>
+            <a className={`link ${serviceBoxStyles.serviceBox}`}>
+                <div className={`${serviceBoxStyles.serviceBox__content}`} style={{backgroundImage: `url(/images/${imageURL})`}}>
+                    <h1 className={`${serviceBoxStyles.serviceBox__header}`}>{ header }</h1>
+                </div>
+            </a>
         </Link>
     )
 }

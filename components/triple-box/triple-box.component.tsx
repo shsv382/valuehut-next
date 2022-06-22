@@ -1,5 +1,5 @@
 import React from "react";
-import './triple-box.module.scss';
+import tripleBoxStyles from './triple-box.module.scss';
 
 interface TripleBoxTypes {
     children?: any
@@ -7,7 +7,7 @@ interface TripleBoxTypes {
 
 const TripleBox: React.FC<TripleBoxTypes> = ({ children }) => {
     return (
-        <div className="triple-box">
+        <div className={`${tripleBoxStyles.tripleBox}`}>
             {children}
         </div>
     )

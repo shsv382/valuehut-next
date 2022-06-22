@@ -3,7 +3,11 @@ import { content, IntrodutionTypes, HomepageTypes } from '../data/content';
 const { widescreenBanner, 
     headerArticle, 
     servicesArticle, 
-    whatCustomersWant, } = { ...content.pages.home };
+    whatCustomersWant,
+    whatWeDo,
+    previousClients } = {...content.pages.home};
+
+const services = content.pages.whatWeDo.introdution
 
 export default function homepageProps(): HomepageTypes {
     return { 
@@ -11,6 +15,8 @@ export default function homepageProps(): HomepageTypes {
         headerArticle, 
         servicesArticle, 
         whatCustomersWant, 
-        whatWeDo: content.pages.whatWeDo.introdution 
+        whatWeDo,
+        previousClients,
+        services: services
     }
 }

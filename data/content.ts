@@ -16,7 +16,7 @@ export interface IntrodutionTypes {
 }
 
 export interface WhatWeDoTypes {
-    introdution: IntrodutionTypes
+    introdution: ArticleTypes[]
 }
 
 export interface PreviousClientsTypes {
@@ -34,6 +34,8 @@ export interface HomepageTypes {
     servicesArticle: any,
     whatCustomersWant: any,
     whatWeDo: any,
+    previousClients: PreviousClientsTypes[],
+    services: any
 }
 
 export interface TrainerTypes {
@@ -75,11 +77,7 @@ export const content = {
             whatWeDo: {
                 imageURL: "mentatdgt.jpg",
                 header: "What we do",
-                description: `Embarking on a journey to build agility into the DNA of an 
-                organisation could be daunting one. We partner with you, leveraging our 
-                experiences with proven Agile Frameworks to co-create alternate ways of working
-                with clear outcomes aligned with enabling the organisation to continue to 
-                deliver valuable products.`
+                description: "Embarking on a journey to build agility into the DNA of an organisation could be daunting one. We partner with you, leveraging our experiences with proven Agile Frameworks to co-create alternate ways of working with clear outcomes aligned with enabling the organisation to continue to deliver valuable products."
             },
             previousClients: [
                 {
@@ -111,8 +109,8 @@ export const content = {
             ]
         },
         whatWeDo: {
-            introdution: {
-                "coaching": {
+            introdution: [
+                {
                     imageURL: "mentatdgt.jpg",
                     header: "Coaching",
                     description: `Recent Research indicates that a lot of companies have 
@@ -124,7 +122,7 @@ export const content = {
                                 Frameworks being adopted and the underlying Agile 
                                 Principles.`
                 }, 
-                "training": {
+                {
                     imageURL: "mikael.jpg",
                     header: "Training",
                     description: `Our training courses have been carefully designed to provide individuals and teams with skills
@@ -135,7 +133,7 @@ export const content = {
                     that are packaged based on your organisational needs. You can book for any of our live or virtual public classes on our training page;
                     and you can contact us for bespoke or private classes.`
                 },
-                "consulting": {
+                {
                     imageURL: "cameron.jpg",
                     header: "Consulting",
                     description: `In situations where the Organisation has made a decision 
@@ -145,7 +143,7 @@ export const content = {
                     of the Agile Framework by teaching Supplimentary practices that extend the 
                     benefit of using such Frameworks.`
                 }
-            }
+            ]
         },
         about: {
             trainers: [

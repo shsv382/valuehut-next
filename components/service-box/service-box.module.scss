@@ -1,6 +1,6 @@
 @import '../../styles/color-scheme.module.scss';
 
-.service-box {
+.serviceBox {
     width: 30%;
     max-width: 320px;
     height: 210px;
@@ -8,7 +8,7 @@
     display: inline-block;
     border-radius: 3px;
     overflow: hidden;
-    .service-box__content {
+    .serviceBox__content {
         background-size: cover;
         max-width: 100%;
         max-height: 100%;
@@ -23,7 +23,7 @@
             transition: transform 3.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
     }
-    .service-box__header {
+    .serviceBox__header {
         background-color: rgba(0,0,0,0.33);
         // background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 30%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.75) 70%, rgba(255,255,255,0) 100%);
         width: 100%;
@@ -46,12 +46,12 @@
 }
 
 
-// .service-box {
+// .serviceBox {
 //     width: 30%;
 //     max-width: 320px;
 //     height: 210px;
 //     border: 2px solid $neutral100;
-//     .service-box__text-content {
+//     .serviceBox__text-content {
 //         width: 100%;
 //         * {
 //             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -70,11 +70,11 @@
 //             text-align: center;
 //         }
 //     }
-//     .service-box__image-content {
+//     .serviceBox__image-content {
 //         transition: transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 //     }
 //     &:hover {
-//         .service-box__image-content {
+//         .serviceBox__image-content {
 //             transform: scale(1.1);
 //             transition: transform 3.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 //         }
@@ -85,7 +85,7 @@
 //     }
 // }
 
-.service-box__content {
+.serviceBox__content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -102,21 +102,21 @@
     }
 }
 
-.service-box__title {
+.serviceBox__title {
     text-align: center;
 }
 
-.service-box__title__slash {
+.serviceBox__title__slash {
     color: $primaryColor;
 }
 
-.service-box__icon {
+.serviceBox__icon {
     display: inline-block;
     width: 160px;
     height: 160px;
 }
 
-.service-box__icon-bordered {
+.serviceBox__iconBordered {
     background-size: cover;
     border-radius: 100%;
     width: 160px;
@@ -127,13 +127,13 @@
     align-items: center;
 }
 
-.service-box__icon-bordered__acronym {
+.serviceBox__iconBordered__acronym {
     color: $neutral600;
     font-size: 50px;
     font-weight: medium;
 }
 
-.service-box__actions {
+.serviceBox__actions {
     position: absolute;
     bottom: 0;
     z-index: 9990;

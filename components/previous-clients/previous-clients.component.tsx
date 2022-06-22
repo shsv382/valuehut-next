@@ -1,15 +1,18 @@
 import React from "react";
-import { useAppSelector } from "../../redux/hooks";
-import './previous-clients.module.scss';
+import previousClientsStyles from './previous-clients.module.scss';
 import TripleBox from "../triple-box/triple-box.component";
 import ClientBox from "../client-box/client-box.component";
+import { PreviousClientsTypes } from '../../data/content';
 
-const PreviousClients = () => {
-    const previousClients = useAppSelector(state => state.content.pages.home.previousClients);
+interface PreviousClientsComponentTypes {
+    previousClients: PreviousClientsTypes[]
+}
+
+const PreviousClients: React.FC<PreviousClientsComponentTypes> = ({ previousClients }) => {
     return (
-        <div className="previous-clients">
-            <h1 className="previous-clients__header">Previous clients</h1>
-            <div className="previous-clients__carousel">
+        <div className={`${previousClientsStyles.previousClients}`}>
+            <h1 className={`${previousClientsStyles.previousClients__header}`}>Previous clients</h1>
+            <div className={`${previousClientsStyles.previousClients__carousel}`}>
                 {
                     <>
                         {previousClients.map((client, i) => <ClientBox {...client} key={`client-${i}`} />)}

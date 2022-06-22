@@ -1,6 +1,6 @@
-import { url } from "inspector";
-import React from "react";
-import './client-box.module.scss';
+import { url } from 'inspector';
+import React from 'react';
+import clientBoxStyles from './client-box.module.scss';
 import { TrainingTypes } from '../../data/training';
 import Link from 'next/link';
 
@@ -18,13 +18,13 @@ interface ClientBoxTypes extends PreviousClientsTypes {
 
 const ClientBox: React.FC<ClientBoxTypes> = ({name, imageURL}) => {
     return (
-        <div className="client-box">
+        <div className={`${clientBoxStyles.clientBox}`}>
                 <img
-                    className="client-box__image-content"
+                    className={`${clientBoxStyles.clientBox__imageContent}`}
                     alt={`${name}`}
                     src={`images/clients/${imageURL}`}
                 />
-                <h3 className="client-box__text-content">
+                <h3 className={`${clientBoxStyles.clientBox__textContent}`}>
                     { name }
                 </h3>
         </div>

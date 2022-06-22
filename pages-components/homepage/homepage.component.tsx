@@ -9,7 +9,7 @@ import TripleBox from '../../components/triple-box/triple-box.component';
 import ServiceBox from '../../components/service-box/service-box.component';
 import PreviousClients from '../../components/previous-clients/previous-clients.component';
 
-const Homepage: React.FC<HomepageTypes> = ({ widescreenBanner, headerArticle, servicesArticle, whatCustomersWant, whatWeDo }) => {
+const Homepage: React.FC<HomepageTypes> = ({ widescreenBanner, headerArticle, servicesArticle, whatCustomersWant, whatWeDo, previousClients, services }) => {
     const articleTextAlign = { 
         textAlign: "left",
     }
@@ -35,21 +35,21 @@ const Homepage: React.FC<HomepageTypes> = ({ widescreenBanner, headerArticle, se
                 description={whatWeDo.description}
                 style={articleTextAlign}
             />
-            {/* <HeaderWithButton
+            <HeaderWithButton
                 header={servicesArticle.header}
                 link="View all"
                 href="services"    
-            /> */}
-            {/* <TripleBox>
+            />
+            <TripleBox>
                 {
-                    Object.values(services).map((service:any, i:number) => {
+                    services.map((service:any, i:number) => {
                         return i < 3 && (
                             <ServiceBox {...service} url={`/services/${service.header.toLowerCase()}`} key={`service-${service.header}`} />
                         )
                     })
                 }
-            </TripleBox> */}
-            {/* <PreviousClients /> */}
+            </TripleBox>
+            <PreviousClients previousClients={previousClients} />
         </div>
         </>
     )

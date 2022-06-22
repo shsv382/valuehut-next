@@ -4,7 +4,7 @@
 .popupMenu {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: $neutral100;
     z-index: 10000;
     @media screen and (max-width: 767px) {
         position: fixed;
