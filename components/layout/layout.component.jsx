@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
+import ScrollToTopWrapper from '../scroll-to-top-wrapper/scroll-to-top-wrapper.component';
 import Header from '../header/header.component.tsx';
 import Footer from '../footer/footer.component.tsx';
 import BottomNav from '../bottom-nav/bottom-nav.component.tsx';
@@ -18,10 +19,12 @@ export default function Layout({ children }) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header />
-      <main>{children}</main>
-      {/* <BottomNav /> */}
-      <Footer offices={offices} />
+      <ScrollToTopWrapper>
+        <Header />
+        <main>{children}</main>
+        {/* <BottomNav /> */}
+        <Footer offices={offices} />
+      </ScrollToTopWrapper>  
     </div>
   );
 }

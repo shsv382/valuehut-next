@@ -1,10 +1,10 @@
 import React, { useLayoutEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 const ScrollToTopWrapper = ({exclude, children}) => {
-    const location = useLocation();
+    const location = useRouter().pathname;
     useLayoutEffect(() => {
-        if (location.hash.indexOf(exclude) < 1) {
+        if (location.indexOf(exclude) < 1) {
             try {
                 window.scroll({
                   top: 0,
@@ -15,7 +15,7 @@ const ScrollToTopWrapper = ({exclude, children}) => {
                 document.documentElement.scrollTo(0, 0);
               }
         }
-    }, [location.pathname]);
+    }, [location]);
     return children
 } 
 
