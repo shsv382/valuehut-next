@@ -1,21 +1,31 @@
 import React from 'react';
-import './contact-page.module.scss';
-import { ContactDataTypes } from '../../data/content';
-
-import { useAppSelector } from '../../redux/hooks';
-
+import contactPageStyles from './contact-page.module.scss';
 import ContactData from '../../components/contact-data/contact-data.component';
+import { ContactDataTypes } from '../../data/content';
+import { SpinnerContainer, SpinnerMiniOverlay } from '../../components/spinner/spinner.styles';
 
-const ContactPage: React.FC = () => {
-    const { offices, howto } = { ...useAppSelector((state) => (state.content.pages.contact)) };
+export interface ContactProps {
+    howto: string,
+    offices: ContactDataTypes[]
+}
+
+const Spinner = () => (
+    <SpinnerMiniOverlay>
+        <SpinnerContainer />
+    </SpinnerMiniOverlay>
+);
+
+const ContactPage: React.FC<ContactProps> = ({ howto, offices }) => {
     return (
-        <div className='page contact-page'>
-            <div className='how-to-contact'>
+        <div className={`page ${contactPageStyles.contactPage}`}>
+            <div className={`${contactPageStyles.howToContact}`}>
                 <h1>How to contact us</h1>
                 <p>{ howto }</p>
             </div>
-            <div className='contact-data-block'>
+            <div className={`${contactPageStyles.contactDataBlock}`}>
                 {
+                    !offices.length ? 
+                    <Spinner /> :
                     offices.map(({ region, address, email, phone }) => (
                         <ContactData 
                             region={region}

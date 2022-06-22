@@ -8,6 +8,14 @@ export const SpinnerOverlay = styled.div`
   align-items: center;
 `;
 
+export const SpinnerMiniOverlay = styled.div`
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const SpinnerContainer = styled.div`
   display: inline-block;
   width: 50px;

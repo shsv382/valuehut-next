@@ -1,6 +1,6 @@
 @import '../../styles/color-scheme.module.scss';
 
-.contact-data {
+.contactData {
     width: 100%;
     padding-top: 20px;
     margin-bottom: 30px;
@@ -18,11 +18,11 @@
         font-size: 24px;
         font-weight: 400;
         margin-bottom: 12px;
-        .contact-data__list__slash {
+        .contactData__list__slash {
             color: $primaryColor;
             font-weight: 700;
         }
-        .contact-data__link {
+        .contactData__link {
             font-size: 24px;
         }
     }

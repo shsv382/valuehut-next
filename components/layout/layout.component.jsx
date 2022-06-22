@@ -12,6 +12,9 @@ export default function Layout({ children }) {
     <div className="App">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        {/*<!-- TrustBox script -->*/}
+        <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+        {/*<!-- End TrustBox script -->*/}
         <meta
           name="description"
           content="Agile trainings for better work"
@@ -22,6 +25,9 @@ export default function Layout({ children }) {
         <main>{children}</main>
         <BottomNav />
         <Footer offices={offices} />
+        {/* <!-- FOXYCART --> */}
+        <script data-cfasync="false" src="https://cdn.foxycart.com/valuehut/loader.js" async defer></script>
+        {/* <!-- FOXYCART --> */}
     </div>
   );
 }

@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import AboutPage, { AboutPageProps } from '../pages-components/about-page/about-page.component'
 import aboutPageProps from '../lib/about.data';
-import { HomepageTypes } from '../data/content';
 
 export function getStaticProps() {
     const aboutProps: AboutPageProps = aboutPageProps();

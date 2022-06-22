@@ -1,7 +1,7 @@
 @import '../../styles/keyframes.module.scss';
 @import '../../styles/color-scheme.module.scss';
 
-.contact-page {
+.contactPage {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -19,7 +19,7 @@
     padding: 30px 20px;
 }
 
-.how-to-contact {
+.howToContact {
     width: 50%;
     padding: 30px 10px;
     text-align: justify;
@@ -34,7 +34,7 @@
     }
 }
 
-.contact-data-block {
+.contactDataBlock {
     width: 40%;
     display: flex;
     flex-wrap: wrap;
