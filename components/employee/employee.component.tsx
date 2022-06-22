@@ -1,5 +1,5 @@
 import React from 'react';
-import './employee.module.scss';
+import employeeStyles from './employee.module.scss';
 
 import { TrainerTypes } from '../../data/content';
 
@@ -9,11 +9,11 @@ interface EmployeeTypes extends TrainerTypes {
 
 const Employee: React.FC<EmployeeTypes> = ({ name, avatar, about }) => {
     return (
-        <section className="employee-block">
-            <div className="employee-avatar">
-                <img src={`images/${avatar}`} className="employee__avatar-image" />
+        <section className={`${employeeStyles.employeeBlock}`}>
+            <div className={`${employeeStyles.employeeAvatar}`}>
+                <img src={`images/${avatar}`} className={`${employeeStyles.employee__avatarImage}`} />
             </div>
-            <article className="employee-about">
+            <article className={`${employeeStyles.employeeAbout}`}>
                 <h2>{name}</h2>
                 <p>{about}</p>
             </article>

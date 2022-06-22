@@ -1,23 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Homepage from '../pages-components/homepage/homepage.component'
-import homepageProps from '../lib/homepage.data'
+import AboutPage, { AboutPageProps } from '../pages-components/about-page/about-page.component'
+import aboutPageProps from '../lib/about.data';
 import { HomepageTypes } from '../data/content';
 
 export function getStaticProps() {
-    const homeProps = homepageProps();
+    const aboutProps: AboutPageProps = aboutPageProps();
     return {
         props: { 
-            homeProps
+            aboutProps
         }
     }
 }
 
-interface HomeTypes {
-    homeProps: HomepageTypes
-}
-
-const Home: NextPage<HomeTypes> = ({ homeProps }) => {
+const About: NextPage = ({ aboutProps }: any) => {
     return (
         <>
             <Head>
@@ -25,9 +21,9 @@ const Home: NextPage<HomeTypes> = ({ homeProps }) => {
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Homepage {...homeProps} />
+            <AboutPage {...aboutProps} />
         </>
     )
 }
 
-export default Home
+export default About

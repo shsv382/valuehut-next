@@ -1,4 +1,4 @@
-interface ArticleTypes {
+export interface ArticleTypes {
     imageURL: string,
     header: string,
     description: string

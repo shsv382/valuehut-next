@@ -1,4 +1,4 @@
-.employee-block {
+.employeeBlock {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
@@ -7,7 +7,7 @@
     }
 }
 
-.employee-avatar {
+.employeeAvatar {
     display: block;
     width: 20%;
     overflow: hidden;
@@ -20,7 +20,7 @@
     }
 }
 
-.employee-about {
+.employeeAbout {
     width: 75%;
     text-align: justify;
     h2 {
@@ -37,7 +37,7 @@
     }
 }
 
-.employee__avatar-image {
+.employee__avatarImage {
     display: block;
     width: 180px;
     height: 180px;
