@@ -1,5 +1,5 @@
 import React from 'react';
-import './popup-menu.module.scss';
+import popupMenuStyles from './popup-menu.module.scss';
 
 interface PopupMenuTypes {
     classname?: string,
@@ -9,7 +9,7 @@ interface PopupMenuTypes {
 
 const PopupMenu: React.FC<PopupMenuTypes> = ({ classname, hidden, children }) => {
     return (
-        <div className={`${hidden ? "hidden" : ""} popup-menu ${classname}`}>
+        <div className={`${popupMenuStyles.popupMenu} ${hidden && popupMenuStyles.popupMenuHidden} ${classname}`}>
             { children }
         </div>
     )

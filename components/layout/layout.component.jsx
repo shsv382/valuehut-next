@@ -18,7 +18,7 @@ export default function Layout({ children }) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
       {/* <BottomNav /> */}
       <Footer offices={offices} />

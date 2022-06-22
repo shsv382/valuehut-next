@@ -1,11 +1,12 @@
 @import '../../styles/color-scheme.module.scss';
 @import '../../styles/keyframes.module.scss';
 
-.popup-menu-item {
+.popupMenuItem {
     padding: 15px 15px;
     height: 60px;
     text-align: center;
     border-bottom: 1px solid $neutral200;
+    background-color: $neutral100;
     &:last-of-type {
         border-bottom: none;
     }

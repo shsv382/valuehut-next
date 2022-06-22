@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         };
     }, [])
     return (
-        <header className={`header`} style={{
+        <header className={`${headerStyles.header}`} style={{
             height: scrolled ? 80 : "", transition: "all 0.25s"
         }}>
             <div className={`${headerStyles.headerContainer}`} id="start">

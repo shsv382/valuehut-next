@@ -1,5 +1,5 @@
 import React from 'react';
-import './popup-menu-item.module.scss';
+import itemStyles from './popup-menu-item.module.scss';
 import Link from 'next/link';
 
 interface PopupMenuItemTypes {
@@ -10,7 +10,11 @@ interface PopupMenuItemTypes {
 
 const PopupMenuItem: React.FC<PopupMenuItemTypes> = ({ label, href }) => {
     return (
-        <Link className="popup-menu-item link link-reverse" href={ href }>{ label }</Link>
+        <Link href={ href }>
+            <a className={`${itemStyles.popupMenuItem} link link-reverse`}>
+                { label }
+            </a>
+        </Link>
     )
 }
 

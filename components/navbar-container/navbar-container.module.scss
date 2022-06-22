@@ -1,7 +1,7 @@
 @import '../../styles/color-scheme.module.scss';
 @import '../../styles/keyframes.module.scss';
 
-.navbar-container {
+.navbarContainer {
     height: 100%;
     // max-width: 50%;
     width: 50%;
@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-.navbar__home-link {
+.navbar__homeLink {
     display: none;
     @media screen and (min-width: 1023px) {
         display: flex;
@@ -33,24 +33,43 @@
 }
 
 @media screen and (min-width: 768px) {
-    .navbar__what-we-do {
+    .navbar__whatWeDo {
         position: relative;
         &:hover {
-            .popup-menu-training {
+            .popupMenuTraining {
                 display: flex;
                 animation: fadeIn 0.1s;
             }   
         }
-        .popup-menu-training {
+        .popupMenuTraining {
             display: none;
             position: absolute;
             top: 1.5px;
             width: 150px;
             &:hover {
-                .navbar__what-we-do {
+                .navbar__whatWeDo {
                     display: none;
                 }
             }
         }
+    }
+}
+
+.popupMenuOpen {
+    padding: 15px 15px;
+    height: 60px;
+    text-align: center;
+    border-bottom: 1px solid $neutral200;
+    position: absolute;
+    top: -13.5px; left: -42px;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    @media screen and (max-width: 767px) {
+        border-left: none;
+        border-right: none;
+        z-index: 9999;
+        width: 100%;
+        text-align: center;
     }
 }
