@@ -16,7 +16,7 @@ interface ConsultingPageTypes {
 }
 
 const ConsultingPage: React.FC<ConsultingPageTypes> = ({ url, consulting, introdution }) => {
-    const introdutionArticle = introdution.filter((item: any) => item.header.toLowerCase() === "consulting")[0];
+    const introdutionArticle = introdution.filter((item: any) => item.header.toLowerCase() === url)[0];
     return (
         <div className={`${trainingsStyles.trainingsPage}`}>
             <MainArticle 
