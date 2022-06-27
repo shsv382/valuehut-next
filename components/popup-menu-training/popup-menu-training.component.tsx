@@ -13,7 +13,7 @@ const PopupMenuTraining: React.FC<PopupMenuTrainingTypes> = ({ isVisible, classn
             <PopupMenuItem label="Services" href="/services" />
             <PopupMenuItem label="Coaching" href="/services/coaching" />
             <PopupMenuItem label="Training" href="/services/training" />
-            <PopupMenuItem label="Consulting" href="/services/consultancy" />
+            <PopupMenuItem label="Consulting" href="/services/consulting" />
         </PopupMenu>
     )
 }

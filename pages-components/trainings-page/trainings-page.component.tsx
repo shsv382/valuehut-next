@@ -16,7 +16,7 @@ interface TrainingsPageTypes {
 }
 
 const TrainingsPage: React.FC<TrainingsPageTypes> = ({ url, trainings, introdution }) => {
-    const introdutionArticle = introdution.filter((item: any) => item.header.toLowerCase() === url);
+    const introdutionArticle = introdution.filter((item: any) => item.header.toLowerCase() === "training")[0];
     return (
         <div className={`${trainingsStyles.trainingsPage}`}>
             <MainArticle 
@@ -39,10 +39,7 @@ const TrainingsPage: React.FC<TrainingsPageTypes> = ({ url, trainings, introduti
                 }
             )}
             </Suspense>
-            {
-                url === "training" &&
-                <TrustBox />
-            }
+            <TrustBox />
         </div>
     );
 }

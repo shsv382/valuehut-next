@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head';
 import { content } from '../../../data/content';
-import { training } from '../../../data/training';
-import TrainingsPage from '../../../pages-components/trainings-page/trainings-page.component';
+import { consulting } from '../../../data/consulting';
+import ConsultingPage from '../../../pages-components/trainings-page/consulting-page';
 
 export function getStaticProps() {
     const introdution = content.pages.whatWeDo.introdution;
@@ -21,7 +21,7 @@ const Trainings: NextPage = ({ introdution }: any) => {
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <TrainingsPage url={"training"} trainings={training.training} introdution={content.pages.whatWeDo.introdution} />
+            <ConsultingPage url={"consulting"} consulting={consulting.consulting} introdution={content.pages.whatWeDo.introdution} />
         </>
     )
 }
