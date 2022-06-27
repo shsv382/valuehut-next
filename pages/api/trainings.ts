@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { content, ContactDataTypes } from '../../data/content';
+import { training, TrainingTypes } from '../../data/training';
 
 type Data = {
-  offices: ContactDataTypes[]
+  trainings: TrainingTypes[]
 }
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ offices: content.pages.contact.offices })
+  res.status(200).json({ trainings: training.training })
 }
