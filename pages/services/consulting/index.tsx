@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { content } from '../../../data/content';
-import { consulting } from '../../../data/consulting';
 import ConsultingPage from '../../../pages-components/trainings-page/consulting-page';
+import Spinner from '../../../components/spinner/spinner.component';
 
 export function getStaticProps() {
     const introdution = content.pages.whatWeDo.introdution;
@@ -13,7 +14,25 @@ export function getStaticProps() {
     }
 }
 
-const Trainings: NextPage = ({ introdution }: any) => {
+const Consulting: NextPage = ({ introdution }: any) => {
+    const [consulting, setConsulting] = useState({
+        title: " ",
+        imageURL: " ",
+        articles: [{
+            content: " ",
+        }]
+    });
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch("/api/consulting");
+            const data = await response.json();
+            setConsulting(data.consulting)
+            setLoading(false)
+        };
+        setLoading(true)
+        fetchData();
+    }, [])
     return (
         <>
             <Head>
@@ -21,9 +40,13 @@ const Trainings: NextPage = ({ introdution }: any) => {
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <ConsultingPage url={"consulting"} consulting={consulting.consulting} introdution={content.pages.whatWeDo.introdution} />
+            {
+                loading ? 
+                <Spinner /> :
+                <ConsultingPage url={"consulting"} consulting={consulting} introdution={content.pages.whatWeDo.introdution} />
+            }
         </>
     )
 }
 
-export default Trainings
+export default Consulting

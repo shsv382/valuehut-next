@@ -19,7 +19,7 @@ export interface ConsultingTypes {
     articles: ConsultingArticleTypes[],
 }
 
-interface ConsultingObject {
+export interface ConsultingObject {
     consulting: ConsultingTypes,
 }
 

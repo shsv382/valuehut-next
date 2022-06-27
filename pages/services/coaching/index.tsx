@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { content } from '../../../data/content';
 import { coaching } from '../../../data/coaching';
@@ -14,6 +15,18 @@ export function getStaticProps() {
 }
 
 const Coaching: NextPage = ({ introdution }: any) => {
+    const [trainings, setTrainings] = useState([]);
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch("/api/trainings");
+            const data = await response.json();
+            setTrainings(data.trainings)
+            setLoading(false)
+        };
+        setLoading(true)
+        fetchData();
+    }, [])
     return (
         <>
             <Head>
