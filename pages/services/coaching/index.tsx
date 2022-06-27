@@ -15,13 +15,19 @@ export function getStaticProps() {
 }
 
 const Coaching: NextPage = ({ introdution }: any) => {
-    const [trainings, setTrainings] = useState([]);
+    const [coaching, setCoaching] = useState({
+        title: " ",
+        imageURL: " ",
+        articles: [{
+            content: " ",
+        }]
+    });
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch("/api/trainings");
+            const response = await fetch("/api/coaching");
             const data = await response.json();
-            setTrainings(data.trainings)
+            setCoaching(data.coaching)
             setLoading(false)
         };
         setLoading(true)
@@ -34,7 +40,7 @@ const Coaching: NextPage = ({ introdution }: any) => {
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <ConsultingPage url={"coaching"} consulting={coaching.coaching} introdution={content.pages.whatWeDo.introdution} />
+            <ConsultingPage url={"coaching"} consulting={coaching} introdution={content.pages.whatWeDo.introdution} />
         </>
     )
 }
