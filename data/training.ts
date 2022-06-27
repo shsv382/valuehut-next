@@ -65,7 +65,7 @@ export const training:TrainingObject = {
             Scrum Master. Students develop a deep understanding of the underlying principles of Scrum 
             and the Agile mindset while learning the practices applied by successful Scrum Teams through 
             a combination of discussion and exercises in class.`,
-            imageURL: "./energy.jpg",
+            imageURL: "energy.jpg",
             logo: "psm.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
@@ -202,7 +202,7 @@ export const training:TrainingObject = {
             support in creating an agile culture is essential to success. The class provides Leaders 
             information that is required to support and enable teams by providing guidance and removing 
             impediments that are beyond the team’s ability to address.`,
-            imageURL: "./fauxels.jpg",
+            imageURL: "fauxels.jpg",
             logo: "pal-e.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
@@ -281,7 +281,7 @@ export const training:TrainingObject = {
                         that already work together in an organisation to improve 
                         their ways of working using Scrum. The class is delivered 
                         over a two days (8hrs per day).`,
-            imageURL: "./morillo.jpg",
+            imageURL: "morillo.jpg",
             logo: "aps.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [

@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import WhatWeDoPage from '../../pages-components/what-we-do-page/what-we-do-page.component'
-import { content } from '../../data/content';
+import Head from 'next/head';
+import { content } from '../../../data/content';
+import { training } from '../../../data/training';
+import TrainingsPage from '../../../pages-components/trainings-page/trainings-page.component';
 
 export function getStaticProps() {
     const introdution = content.pages.whatWeDo.introdution;
@@ -20,7 +21,7 @@ const Services: NextPage = ({ introdution }: any) => {
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <WhatWeDoPage introdution={introdution} />
+            <TrainingsPage url={"training"} trainings={training.training} introdution={content.pages.whatWeDo.introdution} />
         </>
     )
 }

@@ -45,7 +45,7 @@ const WhatWeDoPage: React.FC<WhatWeDoTypes> = ({ introdution }) => {
                         header={ introdution.filter(item => item.header.toLowerCase() === service)[0].header }
                         description={ introdution.filter(item => item.header.toLowerCase() === service)[0].description }
                     >
-                    <Link href={service.toLowerCase()}>
+                    <Link href={`services/${service.toLowerCase()}`}>
                         <a className="button button-secondary button-secondary-default" style={{marginBottom: 30}}>
                             Read More
                         </a>

@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { useAppSelector } from '../../redux/hooks';
-import './trainings-page.module.scss';
+import trainingsStyles from './trainings-page.module.scss';
 
 import MainArticle from '../../components/main-article/main-article.component';
 import Spinner from '../../components/spinner/spinner.component';
@@ -12,14 +11,14 @@ import TrustBox from '../../components/trustbox/trustbox.component';
 interface TrainingsPageTypes {
     url: string,
     trainings: TrainingTypes[],
+    introdution: any,
     children?: any
 }
 
-const TrainingsPage: React.FC<TrainingsPageTypes> = ({ url, trainings }) => {
-    const introdution: IntrodutionTypes = { ...useAppSelector(state => state.content.pages.whatWeDo.introdution) };
-    const introdutionArticle = introdution[url];
+const TrainingsPage: React.FC<TrainingsPageTypes> = ({ url, trainings, introdution }) => {
+    const introdutionArticle = introdution.filter((item: any) => item.header.toLowerCase() === url);
     return (
-        <div className='page trainings-page'>
+        <div className={`${trainingsStyles.trainingsPage}`}>
             <MainArticle 
                 { ...introdutionArticle }
             />
