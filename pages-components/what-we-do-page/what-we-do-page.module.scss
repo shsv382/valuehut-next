@@ -1,7 +1,15 @@
 @import '../../styles/keyframes.module.scss';
 @import '../../styles/color-scheme.module.scss';
 
-.what-we-do-page {
+.servicesPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    margin: auto;
+}
+
+.whatWeDoPage {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,7 +24,7 @@
     }
 }
 
-.services-navigation {
+.servicesNavigation {
     width: 29%;
     margin-top: 50px;
     height: 150px;
@@ -25,14 +33,14 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    .services-navigation-item {
+    .servicesNavigationItem {
         height: 40px;
         line-height: 40px;
         width: 100%;
         text-align: left;
         padding-left: 15px;
     }
-    .services-navigation-item-checked {
+    .servicesNavigationItemChecked {
         border-left: 3px solid $primaryColor;
         padding-left: 12px;
         font-weight: 600;
@@ -43,13 +51,13 @@
         margin-top: 30px;
         flex-direction: row;
         align-items: center;
-        .services-navigation-item {
+        .servicesNavigationItem {
             height: 40px;
             width: 100%;
             text-align: center;
             padding-left: unset;
         }
-        .services-navigation-item-checked {
+        .servicesNavigationItemChecked {
             border-bottom: 3px solid $primaryColor;    
             border-left: unset;
         }
@@ -62,7 +70,7 @@
     }
 }
 
-.what-we-do-page__content {
+.whatWeDoPage__content {
     width: 70%;
     @media screen and (max-width: 1080px) {
         .main__article {
