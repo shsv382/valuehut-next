@@ -1,12 +1,13 @@
 import React, { lazy, Suspense } from 'react';
 import trainingsStyles from './trainings-page.module.scss';
-
+import Link from 'next/link';
 import MainArticle from '../../components/main-article/main-article.component';
 import Spinner from '../../components/spinner/spinner.component';
 
 import { TrainingTypes } from '../../data/training';
 import { consulting, ConsultingTypes, ConsultingArticleTypes } from '../../data/consulting';
 import { content, IntrodutionTypes } from '../../data/content';
+import ServiceArticle from '../../components/service-article/service-article.component';
 
 interface ConsultingPageTypes {
     url: string,
@@ -36,6 +37,16 @@ const ConsultingPage: React.FC<ConsultingPageTypes> = ({ url, consulting, introd
                 }
             )}
             </Suspense>
+            <ServiceArticle 
+                title="For more details:"
+                content=""
+            >
+                <Link href="/contact">
+                    <a className="button button-primary button-primary-large">
+                        Contact us
+                    </a>
+                </Link>
+            </ServiceArticle>
         </div>
     );
 }

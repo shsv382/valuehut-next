@@ -1,5 +1,5 @@
 import React from "react";
-import './service-article.module.scss';
+import serviceArticleStyles from './service-article.module.scss';
 
 interface ServiceArticleProps {
     title?: string,
@@ -10,9 +10,9 @@ interface ServiceArticleProps {
 
 const ServiceArticle: React.FC<ServiceArticleProps> = ({ title, content, contentList, children }) => {
     return (
-        <section className="service__article">
+        <section className={`${serviceArticleStyles.service__article}`}>
             <article>
-                {title && <h2 className="service__article__section__header">{ title }</h2>}
+                {title && <h2 className={`${serviceArticleStyles.service__article__section__header}`}>{ title }</h2>}
                 <p>
                     { content }
                     { 

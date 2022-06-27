@@ -16,10 +16,16 @@ const Header: React.FC = () => {
             }
         };
     }, [])
+    const styles = scrolled ? 
+                    {
+                        height: 80,
+                        transition: "all 0.25s"
+                    } : 
+                    {
+                        transition: "all 0.25s"
+                    }
     return (
-        <header className={`${headerStyles.header}`} style={{
-            height: scrolled ? 80 : "", transition: "all 0.25s"
-        }}>
+        <header className={`${headerStyles.header}`} style={styles}>
             <div className={`${headerStyles.headerContainer}`} id="start">
                 <LogoContainer imageURL='/logo/logo-standalone.png' />
                 <NavbarContainer />
