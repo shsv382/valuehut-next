@@ -1,14 +1,14 @@
 import React from 'react';
 import './service.module.scss';
 import { CoachingTypes } from '../../data/coaching';
-import { ConsultancyTypes } from '../../data/consultancy';
+import { ConsultingTypes } from '../../data/consulting';
 import ServiceArticle from '../../components/service-article/service-article.component';
 import HeroBanner from '../../components/hero-banner/hero-banner.component';
 
 import Link from 'next/link';
 
 interface ServiceTypes {
-    service: CoachingTypes | ConsultancyTypes,
+    service: CoachingTypes | ConsultingTypes,
     children?: any
 }
 
@@ -39,7 +39,7 @@ const Service: React.FC<ServiceTypes> = ({ service }) => {
             >
                 <Link 
                     className="button button-primary button-primary-large"
-                    to="/contact">
+                    href="/contact">
                         Contact us
                 </Link>
             </ServiceArticle>
