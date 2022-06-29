@@ -1,5 +1,6 @@
 import React from "react";
-import './training-banner.module.scss';
+import tbStyles from './training-banner.module.scss';
+import Image from 'next/image';
 
 interface TrainingBannerTypes {
     imageURL: string,
@@ -11,12 +12,14 @@ interface TrainingBannerTypes {
 const TrainingBanner: React.FC<TrainingBannerTypes> = ({ imageURL, title, logo }) => {
     return (
         <>
-            <div className="training-banner-placeholder"></div>
-            <div className="training-banner" style={{backgroundImage: `url(${imageURL})`}}>
+            <div className={`${tbStyles.trainingBannerPlaceholder}`}></div>
+            <div className={`${tbStyles.trainingBanner}`} style={{backgroundImage: `url(${imageURL})`}}>
                 <h1>
                     {
                         logo &&
-                        <img className="training-banner__logo" src={logo} alt={title} />
+                        <div className={`${tbStyles.trainingBanner__logo}`}>
+                            <Image src={logo} alt={title} width='85' height='85' />
+                        </div>
                     }
                     <span>
                         {title}

@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './dates-table.module.scss';
 
 import { TrainingTypes, StreamTypes, PriceTypes } from '../../data/training';
-import { useAppSelector, useAppDispatch } from '../../redux/hooks';
-import { addItem } from '../../redux/cart/cart.actions';
-import { toggleModalHidden } from '../../redux/app/app.actions';
 import { sortStreams } from './dates-table.helpers';
 
 import BookingForm from '../booking-form/booking-form.component';
@@ -29,8 +26,6 @@ export function getDateInWords(date: any): string  {
 }
 
 const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
-    const region: string = useAppSelector(state => state.app.region)
-    const dispatch = useAppDispatch();
     const tableStreams = sortStreams(streams);
                     
     return (
@@ -80,10 +75,8 @@ interface DatesTableStreamTypes {
 }
 
 const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream }) => {
-    const dispatch = useAppDispatch();
     const { startDate, endDate, time, price, filled } = stream;
     const showModal = (stream: any): any => (e: MouseEvent): any => {
-        dispatch(toggleModalHidden())
         e.preventDefault();
         const Modal = React.lazy(() => import('../modal/modal.component'));
         const modalRoot = ReactDOM.createRoot(document.getElementById("modal-root") as HTMLElement);

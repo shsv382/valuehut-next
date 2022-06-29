@@ -1,4 +1,4 @@
-.booking-form {
+.bookingForm {
     width: 95%;
     margin: auto;
     .button#addToCart {
@@ -18,18 +18,18 @@
     }
 }
 
-.booking-form__description {
+.bookingForm__description {
     display: flex;
     justify-content: center;
 }
 
-.booking-form__logo-container {
+.bookingForm__logoContainer {
     width: 80px;
     height: 80px;
     margin-right: 20px;
 }
 
-.booking-form__logo {
+.bookingForm__logo {
     max-width: 80px;
     max-height: 80px;
 }

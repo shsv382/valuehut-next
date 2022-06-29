@@ -1,6 +1,6 @@
 @import '../../styles/color-scheme.module.scss';
 
-.training-banner-placeholder, .training-banner {
+.trainingBannerPlaceholder, .trainingBanner {
     min-height: 300px;
     height: 300px;
     margin-bottom: 50px;
@@ -16,7 +16,7 @@
     }
 }
 
-.training-banner {
+.trainingBanner {
     position: absolute;
     width: 100vw;
     display: flex;
@@ -48,7 +48,7 @@
     }
 }
 
-.training-banner__logo {
+.trainingBanner__logo {
     max-height: 85px;
     max-width: 85px;
     margin-right: 40px;

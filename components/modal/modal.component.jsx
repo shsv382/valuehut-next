@@ -1,5 +1,5 @@
 import React from 'react';
-import './modal.module.scss';
+import modalStyles from './modal.module.scss';
 
 class Modal extends React.Component {
 	unmount = (e) => {
@@ -21,10 +21,10 @@ class Modal extends React.Component {
     }
 
 	render() {
-		return (<div id="modal-background" onClick={this.unmount}>
-					<div id="modal-container">
-						<div id="modal-window" onClick={this.permitClick}>
-							<span id="closeWindow" onClick={this.unmount}>&#10006;</span>
+		return (<div className={`${modalStyles.modalBackground}`} id="modal-background" onClick={this.unmount}>
+					<div className={`${modalStyles.modalContainer}`} id="modal-container">
+						<div className={`${modalStyles.modalWindow}`} id="modal-window" onClick={this.permitClick}>
+							<span className={`${modalStyles.closeWindow}`} id="closeWindow" onClick={this.unmount}>&#10006;</span>
 							{ this.props.children }
 						</div>
 					</div>

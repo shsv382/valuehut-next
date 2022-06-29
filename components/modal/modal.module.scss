@@ -1,6 +1,6 @@
 @import '../../styles/keyframes.module.scss';
 
-#modal-background {
+.modalBackground {
 	margin: auto;
 	position: fixed;
 	top: 0; left: 0;
@@ -16,7 +16,7 @@
 	animation: fadeIn 0.3s;
 }
 
-#modal-container {
+.modalContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -25,7 +25,7 @@
     min-height: 80%;
 }
 
-#modal-window {
+.modalWindow {
 	background: white;
 	display: block;
 	padding: 20px;
@@ -51,7 +51,7 @@
 	}
 }
 
-#closeWindow {
+.closeWindow {
 	position: absolute;
 	top: 2px;
 	right: 7px;

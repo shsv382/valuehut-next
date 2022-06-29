@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import './booking-form.module.scss';
-
-import { useAppSelector, useAppDispatch } from '../../redux/hooks';
-
+import bfStyles from './booking-form.module.scss';
+import Image from 'next/image';
 import { TrainingTypes, StreamTypes, PriceTypes } from '../../data/training';
 import { getDateInWords } from '../dates-table/dates-table.component';
 import { countries, primaryMarket, tertiaryMarket } from '../../data/countries';
@@ -41,10 +39,10 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
         setBookPrice(stream.price[priceNumber])
     };
     return (
-        <div className="booking-form">
-            <div className="booking-form__description">
-                <div className="booking-form__logo-container">
-                    <img className="booking-form__logo" src={`/training/${training.logo}`} />
+        <div className={`${bfStyles.bookingForm}`}>
+            <div className={`${bfStyles.bookingForm__description}`}>
+                <div className={`${bfStyles.bookingForm__logoContainer}`}>
+                    <Image width='80' height='80' alt="logo" className={`${bfStyles.bookingForm__logo}`} src={`/training/${training.logo}`} />
                 </div>
                 <div>
                     <h3>{training.title}</h3>

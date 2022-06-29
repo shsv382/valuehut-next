@@ -1,10 +1,10 @@
 @import '../../styles/keyframes.module.scss';
 
-table {
+.datesTable {
     * {
       font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
       font-size: 20px !important;
-      .dates-table__price-amount {
+      .datesTable__priceAmount {
         min-width: 100px;
       }
       .details {
@@ -12,19 +12,16 @@ table {
       }
       @media screen and (max-width: 768px) {
         font-size: 16px !important;
-        .dates-table__price-amount {
+        .datesTable__priceAmount {
             min-width: 85px;
         }
     }
       @media screen and (max-width: 480px) {
         font-size: 12px !important;
-        .dates-table__price-amount {
+        .datesTable__priceAmount {
           min-width: 70px;
         }
       }
     }
 }
     
-.dates-table__book-btn {
-    
-}

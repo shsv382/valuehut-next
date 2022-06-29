@@ -1,5 +1,5 @@
 import React from "react";
-import './training-article.module.scss';
+import taStyles from './training-article.module.scss';
 
 interface TrainingArticleProps {
     title?: string,
@@ -10,18 +10,18 @@ interface TrainingArticleProps {
 
 const TrainingArticle: React.FC<TrainingArticleProps> = ({ title, content, contentList, children }) => {
     return (
-        <section className="training__article">
+        <section className={`${taStyles.training__article}`}>
             <article>
-                {title && <h2 className="training__article__section__header">{ title }</h2>}
-                <p>
+                {title && <h2 className={`${taStyles.training__article__section__header}`}>{ title }</h2>}
+                <div>
                     { content }
                     { 
                         contentList && 
-                        <ul className="main__article__description-list">
+                        <ul className={`${taStyles.main__article__descriptionList}`}>
                             { contentList.map((d: string, i: number) => (<li key={`${title}-ta-li-${i}`}>{ d }</li>)) }
                         </ul>
                     }
-                </p>
+                </div>
                 { children }
             </article>
         </section>

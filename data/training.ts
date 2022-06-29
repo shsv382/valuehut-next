@@ -122,8 +122,8 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    startDate: new Date("2022-06-24"),
-                    endDate: new Date("2022-06-25"),
+                    startDate: new Date("2022-06-24").toJSON(),
+                    endDate: new Date("2022-06-25").toJSON(),
                     time: "9:00 - 17:00 London, UK & Lagos, Africa",
                     price: [
                         {
@@ -156,8 +156,8 @@ export const training:TrainingObject = {
                     filled: false
                 },
                 {
-                    startDate: new Date("2022-07-29"),
-                    endDate: new Date("2022-07-30"),
+                    startDate: new Date("2022-07-29").toJSON(),
+                    endDate: new Date("2022-07-30").toJSON(),
                     time: "9:00 - 17:00 London, UK & Lagos, Africa",
                     price: [
                         {
@@ -241,8 +241,8 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    startDate: new Date("2022-07-15"),
-                    endDate: new Date("2022-07-16"),
+                    startDate: new Date("2022-07-15").toJSON(),
+                    endDate: new Date("2022-07-16").toJSON(),
                     time: "9:00 - 17:00 London BST Timezone",
                     price: [
                         {

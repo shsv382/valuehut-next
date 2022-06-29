@@ -25,6 +25,7 @@ export default function Layout({ children }) {
         <main>{children}</main>
         <BottomNav />
         <Footer offices={offices} />
+        <div id="modal-root"></div>
         {/* <!-- FOXYCART --> */}
         <script data-cfasync="false" src="https://cdn.foxycart.com/valuehut/loader.js" async defer></script>
         {/* <!-- FOXYCART --> */}
