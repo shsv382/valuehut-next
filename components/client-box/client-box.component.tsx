@@ -3,6 +3,7 @@ import React from 'react';
 import clientBoxStyles from './client-box.module.scss';
 import { TrainingTypes } from '../../data/training';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -19,9 +20,9 @@ interface ClientBoxTypes extends PreviousClientsTypes {
 const ClientBox: React.FC<ClientBoxTypes> = ({name, imageURL}) => {
     return (
         <div className={`${clientBoxStyles.clientBox}`}>
-                <img
+                <Image
                     className={`${clientBoxStyles.clientBox__imageContent}`}
-                    alt={`${name}`}
+                    alt={`${name}`} width='130' height='160'
                     src={`images/clients/${imageURL}`}
                 />
                 <h3 className={`${clientBoxStyles.clientBox__textContent}`}>

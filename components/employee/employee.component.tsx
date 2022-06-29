@@ -11,7 +11,7 @@ const Employee: React.FC<EmployeeTypes> = ({ name, avatar, about }) => {
     return (
         <section className={`${employeeStyles.employeeBlock}`}>
             <div className={`${employeeStyles.employeeAvatar}`}>
-                <img src={`images/${avatar}`} className={`${employeeStyles.employee__avatarImage}`} />
+                <img alt={name} src={`images/${avatar}`} className={`${employeeStyles.employee__avatarImage}`} />
             </div>
             <article className={`${employeeStyles.employeeAbout}`}>
                 <h2>{name}</h2>
