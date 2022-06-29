@@ -22,8 +22,8 @@ const ClientBox: React.FC<ClientBoxTypes> = ({name, imageURL}) => {
         <div className={`${clientBoxStyles.clientBox}`}>
                 <Image
                     className={`${clientBoxStyles.clientBox__imageContent}`}
-                    alt={`${name}`} width='130' height='160'
-                    src={`images/clients/${imageURL}`}
+                    alt={`${name}`} width='160' height='160'
+                    src={`/images/clients/${imageURL}`}
                 />
                 <h3 className={`${clientBoxStyles.clientBox__textContent}`}>
                     { name }
