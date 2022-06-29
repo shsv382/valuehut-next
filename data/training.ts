@@ -65,7 +65,7 @@ export const training:TrainingObject = {
             Scrum Master. Students develop a deep understanding of the underlying principles of Scrum 
             and the Agile mindset while learning the practices applied by successful Scrum Teams through 
             a combination of discussion and exercises in class.`,
-            imageURL: "energy.jpg",
+            imageURL: "./energy.jpg",
             logo: "psm.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
@@ -153,11 +153,45 @@ export const training:TrainingObject = {
                         amount: 900    
                         }
                     ], 
-                    filled: false
+                    filled: true
                 },
                 {
                     startDate: new Date("2022-07-29").toJSON(),
                     endDate: new Date("2022-07-30").toJSON(),
+                    time: "9:00 - 17:00 London, UK & Lagos, Africa",
+                    price: [
+                        {
+                        region: "United Kingdom",
+                        regionDescription: ["United Kingdom"],
+                        amount: 1000,
+                        currency: {
+                            name: "gbp",
+                            symbol: "£",
+                            locale: "en_GB",
+                            template: "GBP"
+                            }
+                        },
+                        {
+                        region: "Primary Market",
+                        regionDescription: primaryMarket,
+                        amount: 1000
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: tertiaryMarket,
+                        amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900
+                        }
+                    ], 
+                    filled: false
+                },
+                {
+                    startDate: new Date("2022-09-16").toJSON(),
+                    endDate: new Date("2022-09-17").toJSON(),
                     time: "9:00 - 17:00 London, UK & Lagos, Africa",
                     price: [
                         {
@@ -202,7 +236,7 @@ export const training:TrainingObject = {
             support in creating an agile culture is essential to success. The class provides Leaders 
             information that is required to support and enable teams by providing guidance and removing 
             impediments that are beyond the team’s ability to address.`,
-            imageURL: "fauxels.jpg",
+            imageURL: "./fauxels.jpg",
             logo: "pal-e.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
@@ -210,10 +244,12 @@ export const training:TrainingObject = {
                     title: "Course Learning Objectives",
                     content: `The course objectives include:`,
                     contentList: [
-                        `Why Agile Matters`,
-                        `Challenges of an Agile Leader`,
-                        `Leaders Grow Agility Developing People`,
-                        `Measuring Agility`
+                        `Understand how agility can help improve your organisation's performance`,
+                        `Challenges of an Agile Leader and their teams`,
+                        `Discover the management style suited for agile ways of working`,
+                        `Learn how to assess and foster the team's agile maturity`,
+                        `Explore how to connect values and goals to develop high performing teams`,
+                        `Identify how to measure the benefits and impacts of agility in your organisation`
                     ]
                 },
                 {
@@ -281,7 +317,7 @@ export const training:TrainingObject = {
                         that already work together in an organisation to improve 
                         their ways of working using Scrum. The class is delivered 
                         over a two days (8hrs per day).`,
-            imageURL: "morillo.jpg",
+            imageURL: "./morillo.jpg",
             logo: "aps.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [

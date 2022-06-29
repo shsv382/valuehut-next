@@ -36,7 +36,7 @@ const Coaching: NextPage = ({ introdution }: any) => {
     return (
         <>
             <Head>
-                <title>Valuehut</title>
+                <title>Coaching - Valuehut</title>
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

@@ -26,7 +26,7 @@ const Contact: NextPage<ContactProps> = ({ howto }) => {
     return (
         <>
             <Head>
-                <title>Valuehut</title>
+                <title>Contact us - Valuehut</title>
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

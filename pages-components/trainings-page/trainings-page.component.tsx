@@ -33,7 +33,7 @@ const TrainingsPage: React.FC<TrainingsPageTypes> = ({ url, trainings, introduti
                             streams={training.streams}
                             isTraining={training.isTraining}
                             logo={training.logo}
-                            key={`training-${training.id}`}
+                            key={`training-${training.title}`}
                         />
                     )
                 }

@@ -60,7 +60,12 @@ export const content = {
             headerArticle: {
                 imageURL: "business.jpg",
                 header: "ValueHut Limited",
-                description: "ValueHut is an agile coaching and training consulting that is helping Organisations focus on most valuable work by aligning strategy to execution across all units of the business; engaging with us leads to outcomes that ensure that our client can continue to delight their customer and employees are increasing happy working in these organisations."
+                description: `ValueHut is an agile coaching and training consultancy that is helping 
+                Organisations focus on most valuable work by aligning their strategy to execution across all 
+                units of the business; we have supported our clients  to build a mindset that enables them to  
+                build the capabilities to continuouslly delight their customers. 
+                In addition, these organisation have developed the skills to make work a safe place where 
+                employees are motivated to deliver value to their customers.`
             },
             servicesArticle: {
                 header: "Services"
@@ -77,7 +82,11 @@ export const content = {
             whatWeDo: {
                 imageURL: "mentatdgt.jpg",
                 header: "What we do",
-                description: "Embarking on a journey to build agility into the DNA of an organisation could be daunting one. We partner with you, leveraging our experiences with proven Agile Frameworks to co-create alternate ways of working with clear outcomes aligned with enabling the organisation to continue to deliver valuable products."
+                description: `Embarking on a journey to build agility into the DNA of an 
+                organisation could be daunting one. We partner with you, leveraging our 
+                experiences with proven Agile Frameworks to co-create alternate ways of working
+                with clear outcomes aligned with enabling the organisation to continue to 
+                deliver valuable products.`
             },
             previousClients: [
                 {

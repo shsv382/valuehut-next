@@ -7,7 +7,7 @@ import TrainingsPage from '../../../pages-components/trainings-page/trainings-pa
 import { getAllTrainingsIds } from '../../../lib/training.data';
 import Training from '../../../pages-components/training/training.component';
 
-import { training } from '../../../data/training';
+import { training, TrainingTypes } from '../../../data/training';
 
 export function getStaticProps({ params }: any) {
     const trainings = training.training.filter(tr => {
@@ -28,7 +28,11 @@ export async function getStaticPaths() {
     };
   }
 
-const TrainingPage: NextPage = ({ training }) => {
+interface TPTypes {
+    training: TrainingTypes
+}
+
+const TrainingPage: NextPage<TPTypes> = ({ training }) => {
     const [trainings, setTrainings] = useState([]);
     const [loading, setLoading] = useState(false)
     useEffect(() => {
@@ -44,7 +48,7 @@ const TrainingPage: NextPage = ({ training }) => {
     return (
         <>
             <Head>
-                <title>Valuehut</title>
+                <title>{training.title}</title>
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

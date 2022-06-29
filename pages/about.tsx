@@ -16,7 +16,7 @@ const About: NextPage = ({ aboutProps }: any) => {
     return (
         <>
             <Head>
-                <title>Valuehut</title>
+                <title>About Valuehut</title>
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

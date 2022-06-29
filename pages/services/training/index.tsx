@@ -30,7 +30,7 @@ const Trainings: NextPage = ({ introdution }: any) => {
     return (
         <>
             <Head>
-                <title>Valuehut</title>
+                <title>Trainings - Valuehut</title>
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
