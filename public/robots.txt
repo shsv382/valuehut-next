@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://valuehut.co
+
+# Sitemaps
+Sitemap: https://valuehut.co/sitemap.xml
