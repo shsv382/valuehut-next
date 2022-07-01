@@ -33,13 +33,13 @@ interface TPTypes {
 }
 
 const TrainingPage: NextPage<TPTypes> = ({ training }) => {
-    const [trainings, setTrainings] = useState([]);
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
+    const [streams, setStreams] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch("/api/training");
+            const response = await fetch(`/api/training?id=${training.title.toLowerCase().split(" ").join("-")}`);
             const data = await response.json();
-            setTrainings(data.trainings)
+            setStreams(data.streams);
             setLoading(false)
         };
         setLoading(true)
@@ -55,7 +55,7 @@ const TrainingPage: NextPage<TPTypes> = ({ training }) => {
             {
                 loading ? 
                 <Spinner /> : 
-                <Training training={training} />
+                <Training training={training} streams={streams} />
             }
         </>
     )

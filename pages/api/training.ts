@@ -1,15 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { training, TrainingTypes } from '../../data/training';
+import { training as trainingsData, TrainingTypes, StreamTypes } from '../../data/training';
 
 type Data = {
-  trainings: TrainingTypes[]
+  streams: StreamTypes[]
 }
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-    const id = req.body.id;
-    const responseTraining = training.training.filter(tr => tr.title.toLowerCase().split(" ").join("-") === id)
-    res.status(200).json({ trainings: training.training })
+    const id = req.query.id;
+    const responseTraining: any = trainingsData.training.find(tr => tr.title.toLowerCase().split(" ").join("-") === id)
+    responseTraining ?
+      res.status(200).json({ 
+        streams: responseTraining.streams 
+      }) :
+      res.status(404)
 }

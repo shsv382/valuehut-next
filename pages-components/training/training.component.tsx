@@ -1,6 +1,6 @@
 import React from 'react';
 import trainingStyles from './training.module.scss';
-import { TrainingTypes } from '../../data/training';
+import { TrainingTypes, StreamTypes } from '../../data/training';
 import TrainingArticle from '../../components/training-article/training-article.component';
 import Link from 'next/link';
 
@@ -9,11 +9,12 @@ import TrainingBanner from '../../components/training-banner/training-banner.com
 
 interface TrainingComponentTypes {
     training: TrainingTypes,
+    streams: StreamTypes[],
     children?: any
 }
 
-const Training: React.FC<TrainingComponentTypes> = ({ training }) => {
-    const { title, description, articles, streams, imageURL, logo } = { ...training };
+const Training: React.FC<TrainingComponentTypes> = ({ training, streams }) => {
+    const { title, description, articles, imageURL, logo } = { ...training };
     return (
         <div className={`page ${trainingStyles.trainingPage}`}>
             <TrainingBanner
