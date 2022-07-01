@@ -37,8 +37,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                 <DatesTableHead />
                 <TableBody>
                 {
-                    tableStreams.filter((stream: StreamTypes) => (new Date(stream.endDate) > new Date()))
-                        .map((stream: StreamTypes) => {
+                    tableStreams.map((stream: StreamTypes) => {
                         const { startDate, endDate, time, price, filled } = stream;
                         return (
                         <DatesTableStream training={training} stream={stream} key={`${training.title}-${stream.startDate}`} />
