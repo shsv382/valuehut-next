@@ -48,7 +48,7 @@ const TrainingPage: NextPage<TPTypes> = ({ training }) => {
     return (
         <>
             <Head>
-                <title>{training.title}</title>
+                <title>{`${training.title} - Valuehut`}</title>
                 <meta name="description" content="Valuehut.co" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
