@@ -37,7 +37,7 @@ export default function BottomNav() {
         }}
       >
         <BottomNavigationAction label="Home" icon={<HomeIcon />} onClick={() => router.push(links[0]) } />
-        <BottomNavigationAction label="Services" icon={<PeopleIcon />} onClick={() => showPopupMenu(!popupMenu) }  />
+        <BottomNavigationAction label="Services" icon={<PeopleIcon />} onClick={() => showPopupMenu(!popupMenu) } onMouseLeave={()=>showPopupMenu(false)} />
         <PopupMenuTraining isVisible={popupMenu} />
         <BottomNavigationAction label="About" icon={<QuestionMarkIcon />} onClick={() => router.push(links[2]) } />
         <BottomNavigationAction label="Contact" icon={<ContactPageIcon />} onClick={() => router.push(links[3]) } />
