@@ -38,10 +38,16 @@ export interface HomepageTypes {
     services: any
 }
 
+export interface SocialNetworksTypes {
+    linkedIn?: string,
+    twitter?: string
+}
+
 export interface TrainerTypes {
     name: string,
     avatar: string,
-    about: string
+    about: string,
+    socialNetworks?: SocialNetworksTypes
 }
 
 export interface PagesInterface {
@@ -162,7 +168,11 @@ export const content = {
                     about: `
                     Sam is our Principal Coach and Lead Trainer at ValueHut; He is a dynamic Agile practitioner and Professional Scrum Trainer with Scrum.org
                     Sam is interested in helping people to develop the Agile mindset that is required by business to remain competitive.
-                    `
+                    `,
+                    socialNetworks: {
+                        twitter: "@samadesoga",
+                        linkedIn: "samadesoga"
+                    }
                 }
             ]
         },

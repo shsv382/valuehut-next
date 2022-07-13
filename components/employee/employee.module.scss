@@ -23,7 +23,7 @@
 .employeeAbout {
     width: 75%;
     text-align: justify;
-    h2 {
+    h2, p {
         margin-bottom: 0.5em;
     }
     @media screen and (max-width: 1024px) {
