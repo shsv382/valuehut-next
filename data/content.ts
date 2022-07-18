@@ -170,8 +170,8 @@ export const content = {
                     Sam is interested in helping people to develop the Agile mindset that is required by business to remain competitive.
                     `,
                     socialNetworks: {
-                        twitter: "@samadesoga",
-                        linkedIn: "samadesoga"
+                        twitter: "sadesoga",
+                        linkedIn: "samueladesoga"
                     }
                 }
             ]

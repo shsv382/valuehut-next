@@ -9,8 +9,14 @@ interface SocialLinksBlockTypes {
 export default function SocialLinksBlock({ socialNetworks }: SocialLinksBlockTypes) {
     return (
         <div className={`${slbStyles.socialLinksBlock}`}>
-            <SocialLink>in</SocialLink>
-            <SocialLink>t</SocialLink>
+            { socialNetworks.linkedIn ? 
+                <SocialLink url={`https://www.linkedin.com/in/${socialNetworks.linkedIn}`}>in</SocialLink> :
+                null
+            }
+            { socialNetworks.twitter ? 
+                <SocialLink url={`https://twitter.com/${socialNetworks.twitter}`}>t</SocialLink> :
+                null
+            }
         </div>
     )
 }
