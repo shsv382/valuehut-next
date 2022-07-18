@@ -10,14 +10,13 @@
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    background-color: $neutral300;
-    opacity: 0.7;
+    background-color: $primaryColor;
     transition: all ease-in 0.1s;
     color: white;
     font-weight: 800;
     font-size: 20px;
     &:hover {
-        background-color: $primaryColor;
+        background-color: $primaryColorDark;
         cursor: pointer;
         transition: all linear 0.1s;
     }
